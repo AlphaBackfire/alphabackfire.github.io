@@ -8,8 +8,9 @@
   <style>
     .dropbtn {
       background-color: #3498DB;
+      border-radius: 16px;
       color: white;
-      padding: 16px;
+      padding: 10px;
       font-size: 16px;
       border: none;
       cursor: pointer;
@@ -17,9 +18,14 @@
     
     .dropbtn:hover, .dropbtn:focus {
       background-color: #2980B9;
+      color: #ececec;
     }
     
+    
     .dropdown {
+      border: none;
+      text-align: center;
+      padding: 20px;
       position: relative;
       display: inline-block;
     }
@@ -30,7 +36,7 @@
       background-color: #f1f1f1;
       min-width: 160px;
       overflow: auto;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
       z-index: 1;
     }
     
@@ -41,7 +47,10 @@
       display: block;
     }
     
-    .dropdown a:hover {background-color: #ddd;}
+    .dropdown a:hover {
+      color: black;
+      background-color: #ddd;
+      }
     
     .show {display: block;}
   </style>
@@ -70,7 +79,8 @@
       }
       
       // Close the dropdown if the user clicks outside of it
-      window.onclick = function(event) {
+
+      window.mouseover = function(event) {
         if (!event.target.matches('.dropbtn')) {
           var dropdowns = document.getElementsByClassName("dropdown-content");
           var i;
